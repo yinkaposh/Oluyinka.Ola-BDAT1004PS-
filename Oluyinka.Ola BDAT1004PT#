@@ -1,0 +1,260 @@
+{
+ "cells": [
+  {
+   "cell_type": "markdown",
+   "id": "f4e08d95",
+   "metadata": {},
+   "source": [
+    "Question 1\n",
+    "5 is an Integer whole number\n",
+    "5.0 is a floating point number\n",
+    "5 > 1 is a Relational operator\n",
+    "'5' is a string\n",
+    "5 * 2 is Arithmetic operator\n",
+    "'5' * 2\n",
+    "'5' + '2'is a string\n",
+    "5 / 2 is Arithmetic operator\n",
+    "5 % 2 is an Arithmetic Operator\n",
+    "{5, 2, 1} Array\n",
+    "5 == 3 is relational operators\n",
+    "Pi (the number) -Logical operators\n"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 2,
+   "id": "35928d2a",
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "Question 2a\n",
+    "\n",
+    "string text_string = \"Supercalifragilisticexpialidocious\";\n",
+    "\n",
+    "int count_letters = text_string.Length;"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 3,
+   "id": "2671418e",
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "The number of letters in the string is 34\r\n"
+     ]
+    }
+   ],
+   "source": [
+    "Console.WriteLine($\"The number of letters in the string is {count_letters}\");"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 4,
+   "id": "1f69d5c5",
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "True\r\n"
+     ]
+    }
+   ],
+   "source": [
+    "Question 2b\n",
+    "\n",
+    "bool xyz = text_string.Contains(\"ice\");\n",
+    "Console.WriteLine($\"{xyz}\");"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "1539f87e",
+   "metadata": {},
+   "source": [
+    "Question 3"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "6f792651",
+   "metadata": {},
+   "source": [
+    "Question 4\n",
+    "\n"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "cfccb41a",
+   "metadata": {},
+   "source": [
+    "Question 5"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "57c9530b",
+   "metadata": {},
+   "source": [
+    "Question 6\n",
+    "\n",
+    "def pig(x):\n",
+    "words = x.split()\n",
+    "pigged_x = []\n",
+    "return ' '.join(pigged_x)\n",
+    "print(pig(\"happy\"))\n"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "083ac18d",
+   "metadata": {},
+   "source": [
+    "Question 7\n",
+    "\n",
+    "def bldcount(filename):\n",
+    "print(filename)\n",
+    "x = open(filename,\"r\")\n",
+    "words=x.read().split()\n",
+    "count_A,count_B,count_AB,count_O,count_OO =0,0,0,0,0\n",
+    "for i in words:\n",
+    "if i =='A':\n",
+    "count_A+=1\n",
+    "elif i=='B':\n",
+    "count_B+=1\n",
+    "elif i=='AB':\n",
+    "count_AB+=1\n",
+    "elif i=='O':\n",
+    "count_O+=1\n",
+    "else:count_OO+=1\n",
+    "print(\"There are\",count_A,\"patients of blood type A\")\n",
+    "print(\"There are\",count_B,\"patients of blood type B\")\n",
+    "print(\"There are\",count_AB,\"patients of blood type AB\")\n",
+    "print(\"There are\",count_O,\"patients of blood type O\")\n",
+    "print(\"There are\",count_OO,\"patients of blood type OO\")\n",
+    "bldcount(\"bloodtype.txt\")   \n"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "f4a96d7b",
+   "metadata": {},
+   "source": [
+    "Question 8\n",
+    "def curconv(currency,amount):\n",
+    "f = open(\"currencies.txt\", \"r\")\n",
+    "g=f.readlines()\n",
+    "list1=[]\n",
+    "list2=[]\n",
+    "list3=[]\n",
+    "f.close()\n",
+    "for i in g:\n",
+    "j=0\n",
+    "k=i.split('\\t')\n",
+    "for j in range(len(k)-2):\n",
+    "list1.append(k[j])\n",
+    "list2.append(float(k[j+1]))\n",
+    "list3.append(k[j+2].strip())\n",
+    "h=list1.index(currency)\n",
+    "return amount*list2[h]\n",
+    "curconv(\"EUR\",100)\n",
+    "cordon(\"JPY\",100)\n",
+    "\n"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "id": "5dec3d8e",
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "Question 9\n",
+    "\n",
+    "1.Trying to add incompatible variables, as in adding 6 + ‘a’ answer) Unsupported type \n",
+    "2.Referring to the 12th item of a list that has only 10 items answer) Out of index\n",
+    "3.Using a value that is out of range for a function’s input, such as calling math.sqrt(-1.0) answer)domain error\n",
+    "4.Using an undeclared variable, such as print(x) when x has not been defined answer)Variable not defined \n",
+    "5.Trying to open a file that does not exist, such as mistyping the file name or looking in the wrong directory. answer)No such dictionary found\n",
+    "\n",
+    "\n"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "dd4e091d",
+   "metadata": {},
+   "source": [
+    "Question 10\n",
+    "\n",
+    "def frequencies(text):\n",
+    "alphabets = ('a','b','c','d','e','f','g','h','i','j','k','l','m','n','o','p','q','r','s','t','u','v','w','x','y','z')\n",
+    "total_characters = []\n",
+    "alpha_dict = {}\n",
+    "\n",
+    "#picking character from every word of input and appending it to total_character list.\n",
+    "\n",
+    "for word in text:\n",
+    "for char in word:\n",
+    "if char.isalpha():\n",
+    "total_characters.append(char)\n",
+    "#checking if the alphabet is present in the total_character list than assigning it it's count otherwise 0\n",
+    "for char in alphabets:\n",
+    "if char in total_characters:\n",
+    "alpha_dict[char] = total_characters.count(char)\n",
+    "else:\n",
+    "alpha_dict[char] = 0\n",
+    "            \n",
+    "#printing out the values(count) of the alphabets present in the total_character list\n",
+    "print(list(alpha_dict.values()))\n",
+    "\n",
+    "\n",
+    "\n",
+    "\n",
+    "\n",
+    "\n",
+    "\n",
+    "\n",
+    "\n",
+    "\n"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "id": "3d2021bf",
+   "metadata": {},
+   "outputs": [],
+   "source": []
+  },
+  {
+   "cell_type": "markdown",
+   "id": "d608b6d9",
+   "metadata": {},
+   "source": []
+  }
+ ],
+ "metadata": {
+  "kernelspec": {
+   "display_name": ".NET (C#)",
+   "language": "C#",
+   "name": ".net-csharp"
+  },
+  "language_info": {
+   "file_extension": ".cs",
+   "mimetype": "text/x-csharp",
+   "name": "C#",
+   "pygments_lexer": "csharp",
+   "version": "8.0"
+  }
+ },
+ "nbformat": 4,
+ "nbformat_minor": 5
+}
